@@ -1,0 +1,22 @@
+
+/* EVENTS */
+#newsTrigger {
+    position: fixed;
+    left: 50%;
+    top: 67.5%;
+    transform: translate(-50%, -50%);
+    min-width: 210px;
+}
+.newsModalTitle {
+    color: white;
+}
+#newsModal, #newsModalFooter {
+    background-color: rgba(1, 11, 28, 0.65);
+}
+#newsModalFooter .material-icons {
+    color: white;
+}
+
+
+
+

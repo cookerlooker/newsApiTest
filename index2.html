@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <!-- custom stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+     <!-- Breaking News Modal Trigger -->
+
+    <a id="newsTrigger" class="waves-effect waves-light btn deep-orange modal-trigger" href="#newsModal">Breaking News</a>
+
+            <!-- Modal Structure -->
+            <!-- top news appears here -->
+
+            <div id="newsModal" class="modal">
+                <div class="full-modal">
+                    <div class="modal-content">
+                        <h5 class="newsModalTitle">Here's Your Daily News</h5>
+                    </div>
+                    <div class= "container">
+
+                          <div class="row">
+                            <div class="class="col s12 m8">
+                              <div class="card">
+                                <div class="card-image">
+                                  <img src="images/sample-1.jpg">
+                                  <span class="card-title">Card Title</span>
+                                </div>
+                                <div class="card-content">
+                                  <p>I am a very simple card. I am good at containing small bits of information.
+                                  I am convenient because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                  <a href="#">This is a link</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+         
+
+
+
+                            <div id="topNews"></div>
+                    </div>
+                    <div id="newssModalFooter" class="modal-footer">
+                        <a href="#!" class="modal-close btn-flat"><i class="material-icons">close</i></a>
+                    </div>
+                </div>
+            </div>
+
+
+<!-- Materialize JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<!-- custom JS -->
+<script src="assets/javascript/app.js"></script>
+</body>
+
+</html>        
