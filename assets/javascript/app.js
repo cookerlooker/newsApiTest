@@ -12,7 +12,7 @@
                 method: "GET"
             }).then(function(res) {
 
-                //console.log(res);
+                console.log(res);
 
                 for (var i = 0; i < res.articles.length; i++) {
 
@@ -26,19 +26,27 @@
                     newsImage.attr("src",res.articles[i].urlToImage);
                     
                     
+                   //var newsButton = $('a href="newsButton"<button>Visit page now</button>')
+                    var newsButton = $('<button <a> Visit Page Now>').attr("href",res.articles[i].url);
+                   // newsButton.click("href",res.articles[i].url);
+                    //newsButton.attr("href",res.articles[i].url);
+                    //var newsUrl = $('<a>').attr("href",res.articles[i].url);
+                    //newsUrl.attr("href",res.articles[i].url);
+                    //console.log (res.articles[i].url);
+                    //console.log ('I am your button');
                     
-                    var newsUrl = $('<a>').attr("href",res.articles[i].url);
-                    newsUrl.attr("href",res.articles[i].url);
-                    console.log (res.articles[i].url)
-                    
-                    
+
+                    //<a href="#"><button>Text</button></a>
+                     $('.newsButton').click(function() {
+   window.location = (res.articles[i].url) + this.url;
+ });
 
 
 
                     item.append(newsHeader);
                     item.append(newsImage);
-                    item.append(newsUrl);
-                    //item.append(newsButton)
+                    //item.append(newsUrl);
+                    item.append(newsButton)
 
                     $('#breakingNews').append(item);
 
@@ -54,7 +62,8 @@
             }); 
 
 
-
+    
+//var $newbutton= $('<input/>').attr({ type: 'button', location:locationname , name:'btn1', class:'btn btn-success', value:'Add For'+locationname});
     
             
 
