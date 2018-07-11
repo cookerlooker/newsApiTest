@@ -14,34 +14,40 @@
 
                 console.log(res);
 
+                for (var i = 0; i < res.articles.length; i++) {
+
+                    //console.log (res.articles[i].description);
+
+                    var item = $('<li>');
+                    //item.text(res.articles[i].title);
+                    var newsHeader = $('<div>');
+                    newsHeader.text(res.articles[i].title);
+                    var newsImage = $('<img class="materialboxed" width="450">');
+                    newsImage.attr("src",res.articles[i].urlToImage);
+                    
+                    
+                
+                    var newsUrl = $('<a>').attr("href",res.articles[i].url);
+                    newsUrl.attr("href",res.articles[i].url);
+                    //console.log (res.articles[i].url)
+                    
+                    
+
+
+
+                    item.append(newsHeader);
+                    item.append(newsImage);
+                    item.append(newsUrl);
+
+                    $('#breakingNews').append(item);
+
+
+
+
+                }
+
             
-
-               
-            // Create the  list group to contain the articles and add the article content for each
-                   
-            //var $newsList = $("<ul>");
-            //$newsList.addClass("newsList-Group");
-
-            // Add the newly created element to the DOM
-            //$("#article-section").append($articleList);
-
-                    //for (var i = 0; i < res.articles.length; i++){
-
-                        //res.articles.length = 5;
-
-                        //var topNews = res.articles[i];
-
-
-
-                       
-            
-
-
-                   
-
-
-                //}
-             //}
+                
                 
 
             }); 
