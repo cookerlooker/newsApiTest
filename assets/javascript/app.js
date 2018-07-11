@@ -12,7 +12,7 @@
                 method: "GET"
             }).then(function(res) {
 
-                console.log(res);
+                //console.log(res);
 
                 for (var i = 0; i < res.articles.length; i++) {
 
@@ -20,16 +20,16 @@
 
                     var item = $('<li>');
                     //item.text(res.articles[i].title);
-                    var newsHeader = $('<div>');
+                    var newsHeader = $('<div id="newsHeader">');
                     newsHeader.text(res.articles[i].title);
                     var newsImage = $('<img class="materialboxed" width="450">');
                     newsImage.attr("src",res.articles[i].urlToImage);
                     
                     
-                
+                    
                     var newsUrl = $('<a>').attr("href",res.articles[i].url);
                     newsUrl.attr("href",res.articles[i].url);
-                    //console.log (res.articles[i].url)
+                    console.log (res.articles[i].url)
                     
                     
 
@@ -38,6 +38,7 @@
                     item.append(newsHeader);
                     item.append(newsImage);
                     item.append(newsUrl);
+                    //item.append(newsButton)
 
                     $('#breakingNews').append(item);
 
